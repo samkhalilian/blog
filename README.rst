@@ -5,9 +5,7 @@ Welcome to my Math, Coding and Trading blog!
 
 This blog is written using ABlog which utilises `Sphinx and reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_.
 
-To build the blogs HTML pages install `Python <https://www.python.org/downloads/>`_.
-
-Then from the command line :
+To build the blogs HTML pages install `Python <https://www.python.org/downloads/>`_ then from the command line :
 
 .. code-block:: bash
     
