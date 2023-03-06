@@ -1,13 +1,12 @@
 Blog
 ====
 
-Create repository on command line:
+Create repository in GitHub and then from the command line:
 
-. code-block:: bash
+.. code-block:: bash
 
-    # >> echo "# blog" >> README.md
     >> git init
-    >> git add README.md
+    >> git add .
     >> git commit -m "first commit"
     >> git branch -M main
     >> git remote add origin https://github.com/samkhalilian/blog.git
@@ -15,7 +14,7 @@ Create repository on command line:
 
 Dependencies:
 
-. code-block:: bash
+.. code-block:: bash
 
     >> pip install ablog # install https://ablog.readthedocs.io/
     >> pip install Pallets-Sphinx-Themes # install theme
