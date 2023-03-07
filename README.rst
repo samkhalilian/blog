@@ -1,11 +1,19 @@
 Sam's Blog
 ==========
 
+============
+Introduction
+============
+
 Welcome to my Math, Coding and Trading blog!
 
 This blog is written using `ABlog <https://ablog.readthedocs.io>`_ an extension to `Sphinx <https://www.sphinx-doc.orgl>`_.
 
 The pages are hosted on a `Google Cloud Platform <https://cloud.google.com/storage/docs/hosting-static-website>`_ static website `Sam's Blog <www.samkhalilian.co.uk>`_.
+
+===========
+Quick Start
+===========
 
 To build the blogs HTML pages install `Python 3.6 <https://www.python.org/downloads/>`_ or higher, then from the command line:
 

@@ -74,7 +74,7 @@ language = "en"
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when look
 # ing for source files.
-exclude_patterns = [".venv_blog/*",]
+exclude_patterns = [".venv/*",]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -109,7 +109,7 @@ todo_include_todos = False
 # blog_path = 'blog'
 
 # The "title" for the blog, used in active pages.  Default is ``'Blog'``.
-blog_title = "Sam's Blog Blog"
+blog_title = "Sam's Blog"
 
 # Base URL for the website, required for generating feeds.
 # e.g. blog_baseurl = "http://example.com/"
@@ -315,7 +315,7 @@ html_theme_options = {
     'github_button': True,
     'github_count': True,
     'github_user': 'samkhalilian',
-    'github_repo': 'docs',
+    'github_repo': 'blog',
     # 'donate_url': 'www.google.com',
 }
 # html_theme_options = { 
