@@ -3,9 +3,11 @@ Sam's Blog
 
 Welcome to my Math, Coding and Trading blog!
 
-This blog is written using ABlog which utilises `Sphinx and reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_.
+This blog is written using `ABlog <https://ablog.readthedocs.io>`_ an extension to `Sphinx <https://www.sphinx-doc.orgl>`_.
 
-To build the blogs HTML pages install `Python <https://www.python.org/downloads/>`_ then from the command line :
+The pages are hosted on a `Google Cloud Platform <https://cloud.google.com/storage/docs/hosting-static-website>`_ static website `Sam's Blog <www.samkhalilian.co.uk>`_.
+
+To build the blogs HTML pages install `Python 3.6 <https://www.python.org/downloads/>`_ or higher, then from the command line:
 
 .. code-block:: bash
     
