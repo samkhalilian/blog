@@ -3,8 +3,8 @@
    :tags: Python
    :author: Sam Khalilian
 
-Python Virtual Environments
-===========================
+Virtual Environments
+====================
 
 Virtual environments allow different Python projects to have different package depenedenices.
 

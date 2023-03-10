@@ -35,7 +35,7 @@ so attempts to import the module will fail.
 
 Without it, however, you can't import directly. You have to amend the system path:
 
-.. code-blok:: bash
+.. code-block:: bash
 
    import sys
    sys.path.insert(0, 'dir/sub_dir/module.py')

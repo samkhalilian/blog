@@ -3,5 +3,5 @@
    :tags: Math
    :author: Sam Khalilian
 
-Root Finding with the Bisection Method
-======================================
+Bisection Method
+================

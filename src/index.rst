@@ -7,13 +7,20 @@ Contents
 ========
 
 .. toctree::
+   :maxdepth: 2
 
-   about.rst
-   releases.rst
-   posts.rst
+   about
+   release
+   posts
+   math/_toc
+   infra/_toc
+   python/_toc
+   cpp/_toc
+   databases/_toc
+   trade/_toc
+   ai/_toc
 
-   .. :hidden:
-
+.. .. :hidden:
 
 .. Recent Posts
 .. ============

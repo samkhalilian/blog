@@ -3,5 +3,5 @@
    :tags: Trading
    :author: Sam Khalilian
 
-   TALib
-   =====
+TALib
+=====

@@ -1,6 +1,6 @@
 .. post:: Oct 12, 2022
-   :category: Coding
-   :tags: Coding
+   :category: Programming
+   :tags: Infra
    :author: Sam Khalilian
 
 Git

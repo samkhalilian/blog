@@ -30,6 +30,12 @@ extensions = [
     'sphinx.ext.extlinks',
     'alabaster',
     'ablog',
+    'sphinxcontrib.youtube',
+    'sphinx.ext.mathjax',
+    'sphinx-mathjax-offline',
+    # 'matplotlib.sphinxext.only_directives',
+    # 'matplotlib.sphinxext.plot_directive',
+    'numpydoc',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -310,7 +316,7 @@ html_theme = 'alabaster'
 html_theme_options = {
     # 'logo': 'images/smiley.png',
     # 'logo_name': True,
-    'description': "Math | Programming | Trading",
+    'description': "Quantitative Development",
     'github_banner': True,
     'github_button': True,
     'github_count': True,

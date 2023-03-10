@@ -2,6 +2,21 @@
    :category: Programming
    :tags: Python
 
+Docs
+====
+
+======
+Sphinx
+======
+
+https://www.sphinx-doc.org/en/master/
+
+Alabaster theme options
+
+https://alabaster.readthedocs.io/en/latest/index.html
+
+
+===============
 Blog with ABlog
 ===============
 
@@ -19,3 +34,4 @@ https://ablog.readthedocs.io/manual/ablog-commands/
     See 'ablog <command> -h' for more information on a specific command.
 
     ablog clean && ablog build && ablog serve  # CTRL + C so stop local host
+

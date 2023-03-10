@@ -3,5 +3,5 @@
    :tags: Math
    :author: Sam Khalilian
 
-Genetic Algorithm Solver
-========================
+Genetic Algorithm
+==================
