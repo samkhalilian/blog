@@ -9,7 +9,7 @@ Welcome to my Math, Coding and Trading blog!
 
 This blog is written using `ABlog <https://ablog.readthedocs.io>`_ an extension to `Sphinx <https://www.sphinx-doc.orgl>`_.
 
-The pages are hosted on a `Google Cloud Platform <https://cloud.google.com/storage/docs/hosting-static-website>`_ static website `Sam's Blog <www.samkhalilian.co.uk>`_.
+`Google Cloud Platform <https://cloud.google.com/storage/docs/hosting-static-website>`_ hosts the blog as a static website at `Sam's Blog <www.samkhalilian.co.uk>`_. 
 
 ===========
 Quick Start
@@ -32,10 +32,9 @@ To build the blogs HTML pages install `Python 3.6 <https://www.python.org/downlo
     >> %PYTHON% -m venv .venv 
     >> .venv\Scripts\activate
 
-    # install packages (to be superseded by setup.py)
-    >> pip install ablog # install https://ablog.readthedocs.io/
-    >> pip install Pallets-Sphinx-Themes # install theme
-
+    # install packages
+    >> pip install -r requirements.txt
+    
     # build blog pages
     >> cd ./blog/src
     >> ablog clean

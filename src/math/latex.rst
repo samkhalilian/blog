@@ -34,7 +34,7 @@ Useful Links
 Cheat Sheet
 ===========
 
-.. list-table:: Latex cheat sheet
+.. list-table:: List equations in Latex
    :widths: 20 20
    :header-rows: 1
    :stub-columns: 0

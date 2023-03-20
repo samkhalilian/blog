@@ -35,3 +35,12 @@ https://ablog.readthedocs.io/manual/ablog-commands/
 
     ablog clean && ablog build && ablog serve  # CTRL + C so stop local host
 
+Extensions use:
+
+.. code-block:: bash
+    
+    >> pip install Pallets-Sphinx-Themes # install theme
+    >> pip install sphinxcontrib-youtube
+    >> pip install -U sphinx-mathjax-offline
+    >> pip install numpydoc
+    >> pip install sphinx-notfound-page

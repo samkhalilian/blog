@@ -12,13 +12,13 @@ Contents
    about
    release
    posts
-   math/_toc
-   infra/_toc
-   python/_toc
-   cpp/_toc
-   databases/_toc
-   trade/_toc
-   ai/_toc
+   math/index
+   infra/index
+   python/index
+   cpp/index
+   databases/index
+   trade/index
+   ai/index
 
 .. .. :hidden:
 

@@ -1,4 +1,5 @@
 .vnenv/
+src/_static/
 src/__pycache__/
 src/_website/
 src/.doctrees/

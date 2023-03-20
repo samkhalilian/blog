@@ -6,6 +6,7 @@ Python
     pip
     venv
     setup
+    requirements
     init
     logging
     unit_tests
