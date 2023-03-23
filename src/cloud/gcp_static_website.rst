@@ -66,30 +66,3 @@ From command line:
     # make the website public
     gsutil iam ch allUsers:objectViewer gs://${BUCKET}
     gsutil acl ch -u AllUsers:R gs://${BUCKET}
-    
-    # optional environment variables
-    >> set PYTHON = %LOCALAPPDATA%\Programs\Python\Python310\python
-    >> set HOME = %HOMEDIR%%HOMEPATH%  # set home directoy
-    >> set PROJECT = %HOME%/project  # select project directoy
-    
-    >> cd %PROJECT%
-    >> git clone https://github.com/samkhalilian/blog.git
-
-    # virtual environment
-    >> cd blog
-    >> %PYTHON% -m venv .venv 
-    >> .venv\Scripts\activate
-
-    # install packages (to be superseded by setup.py)
-    >> pip install ablog # install https://ablog.readthedocs.io/
-    >> pip install Pallets-Sphinx-Themes # install theme
-    >> pip install sphinxcontrib-youtube
-    >> pip install -U sphinx-mathjax-offline
-    >> pip install numpydoc
-    >> pip install sphinx-notfound-page
-
-    # build blog pages
-    >> cd ./blog/src
-    >> ablog clean
-    >> ablog build # build HTML pages
-    >> ablog serve # to launch HTML pages
