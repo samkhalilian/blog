@@ -9,7 +9,7 @@ Welcome to my Math, Coding and Trading blog!
 
 This blog is written using `ABlog <https://ablog.readthedocs.io>`_ an extension to `Sphinx <https://www.sphinx-doc.orgl>`_.
 
-`Google Cloud Platform <https://cloud.google.com/storage/docs/hosting-static-website>`_ hosts the blog as a static website at `Sam's Blog <www.samkhalilian.co.uk>`_. 
+`Google Cloud Platform <https://cloud.google.com/storage/docs/hosting-static-website>`_ hosts the blog as a static website at `www.samkhalilian.dev <www.samkhalilian.dev>`_. 
 
 ===========
 Quick Start
