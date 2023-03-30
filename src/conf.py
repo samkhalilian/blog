@@ -422,4 +422,4 @@ html_show_copyright = True
 # Output file base name for HTML help builder.
 htmlhelp_basename = "SamsBlogdoc"
 
-github_pages = "samkhalilian"
+gitablhub_pages = "samkhalilian"

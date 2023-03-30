@@ -40,10 +40,10 @@ GitHub Pages
     >> set GITHUB_PAGES=samkhalilian
     >> set GITHUB_TOKEN=GITHUB_TOKEN_SAMKHALILIAN_SAMKHALILIAN_GITHUB_IO
     >> set WEBSITE=Z:/blog/src/_website
-    >> set REPODIR=Z:/blog/samkhalilian.github.io
-    >> set REPODIR=samkhalilian.github.io
+    >> set REPODIR=Z:/blog/samkhalilian.github.io/
+    >> set GITHUB_BRANCH=main
     >> ablog deploy -p %REPODIR% -g %GITHUB_PAGES% --github-token %GITHUB_TOKEN%
-    >> ablog deploy -p %REPODIR% -g %GITHUB_PAGES% --github-ssh 
+    >> ablog deploy -p %REPODIR% -g %GITHUB_PAGES% --github-branch %GITHUB_BRANCH% --github-ssh 
 
 Custom Domain
 -------------
