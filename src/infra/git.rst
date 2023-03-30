@@ -1,8 +1,3 @@
-.. post:: Oct 12, 2022
-   :category: Programming
-   :tags: Infra
-   :author: Sam Khalilian
-
 Git
 ===
 
@@ -24,3 +19,6 @@ To commit changes to this repo:
     >> git add .
     >> git commit -m "..."
     >> git push
+
+
+https://docs.github.com/en/pages/quickstart

@@ -3,7 +3,6 @@
    :tags: Math
    :author: Sam Khalilian
 
-
 Math is Everywhere
 ===================
 

@@ -10,6 +10,14 @@ Contents
    :maxdepth: 2
 
    about
+   to_do
+   release/release
+   infra/index
+   python/index
+
+.. .. toctree::
+   :maxdepth: 2
+   about
    release
    posts
    math/index
@@ -19,6 +27,7 @@ Contents
    databases/index
    trade/index
    ai/index
+
 
 .. .. :hidden:
 

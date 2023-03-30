@@ -35,3 +35,7 @@ Trading posts:
     :list-style: disc
     :tags: Trading
     :expand: Read more ...
+
+Draft posts::
+
+:ref:`blog-drafts`

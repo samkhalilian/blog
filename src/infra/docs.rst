@@ -1,24 +1,8 @@
-.. post:: Oct 12, 2022
-   :category: Programming
-   :tags: Python
-
 Docs
 ====
 
-======
-Sphinx
-======
-
-https://www.sphinx-doc.org/en/master/
-
-Alabaster theme options
-
-https://alabaster.readthedocs.io/en/latest/index.html
-
-
-===============
-Blog with ABlog
-===============
+This blog is written using `ABlog <https://ablog.readthedocs.io>`_ an extension to `Sphinx <https://www.sphinx-doc.orgl>`_
+which uses Mark Up language `Restructured Text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`+.
 
 https://ablog.readthedocs.io/manual/ablog-commands/
 
@@ -33,14 +17,5 @@ https://ablog.readthedocs.io/manual/ablog-commands/
 
     See 'ablog <command> -h' for more information on a specific command.
 
-    ablog clean && ablog build && ablog serve  # CTRL + C so stop local host
-
-Extensions use:
-
-.. code-block:: bash
-    
-    >> pip install Pallets-Sphinx-Themes # install theme
-    >> pip install sphinxcontrib-youtube
-    >> pip install -U sphinx-mathjax-offline
-    >> pip install numpydoc
-    >> pip install sphinx-notfound-page
+    >> ablog clean && ablog build && ablog serve  # CTRL + C so stop local host
+    >> ablog serve -r # to watch yourself blog

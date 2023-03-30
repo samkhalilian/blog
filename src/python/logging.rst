@@ -1,7 +1,3 @@
-.. post:: Oct 31, 2022
-   :category: Programming
-   :tags: Python
-
 Print vs Logging
 ================
 

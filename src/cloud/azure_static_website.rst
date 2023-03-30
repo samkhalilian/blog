@@ -1,8 +1,3 @@
-.. post:: Oct 14, 2022
-   :category: Programming
-   :tags: Cloud
-   :author: Sam Khalilian
-
 Deploy a Static Website on Azure
 ================================
 

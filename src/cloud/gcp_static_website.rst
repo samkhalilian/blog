@@ -1,6 +1,36 @@
 GCP Static Website
 ==================
 
+============
+Useful Links
+============
+
+* https://codelabs.developers.google.com/codelabs/cloud-webapp-hosting-gcs#8
+* https://stackoverflow.com/questions/62113405/static-website-i-am-hosting-cannot-be-reached-and-the-server-ip-cannot-be-found
+* https://cloud.google.com/storage/docs/hosting-static-website
+
+Load balancing for HTTPS and avoid privacy error
+--------------------------------------------------------------------
+Ended up finding the answer thanks to @IshRaj on ServerFault.
+
+For future reference to anyone else viewing, Google Cloud Storage only supports HTTP connections when hosting a static website through CNAME resource records. To serve content through a custom domain over SSL, you will need to either:
+
+Set up an external HTTPS load balancer (instructions here), potentially with Google Cloud CDN (set-up documentation here)
+
+Connect a third-party Content Delivery Network to your Google Cloud
+Storage (guide here)
+
+Host your static website on Google App Engine with Python (guide here)
+
+Serve static website content through Google Firebase rather than
+Google Cloud Platform (tutorial here/additional support)
+
+Personally, I went with Google Firebase (the last option), which automatically upgrades websites to https. It was simple and quick to set up and content is now directly deployable from my files. As well, with Firestore's automatic scalability and powerful queries, Firebase becomes a viable alternative, especially with its other features (user authentication, realtime data synchronization, machine-learning, extensions).
+--------------------------------------------------------------------
+
+https://misskecupbung.wordpress.com/2022/09/22/google-cloud-deploying-a-static-web-application-to-google-cloud-storage-bucket-with-https-load-balancer/
+
+
 https://medium.com/google-cloud/hosting-a-static-website-on-google-cloud-using-google-cloud-storage-ddebcdcc8d5b
 https://medium.com/google-cloud/using-chrome-dev-tools-with-google-cloud-50c20f230d61
 
@@ -38,6 +68,11 @@ https://accounts.google.com/signup/v2/webcreateaccount?biz=false&cc=GB&continue=
 Install GCP CLI
 ===============
 
+gcloud cheat sheet:
+
+https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97
+
+
 https://cloud.google.com/sdk/docs/install
 %LOCALAPPDATA%\Google\Cloud SDK
 
@@ -46,12 +81,19 @@ From command line:
 .. code-block:: bash
     
     # create project
-    PROJECT=[Your project]
-    gcloud config set project $PROJECT
+    set PROJECT=[Your project]
+    gcloud config set project %PROJECT%
+
+    # if beta is not installed you will asked to install it in a new terminal
+    gcloud beta billing accounts list 
+
+    # you can rename billing acount at https://console.cloud.google.com/billing
+    # else is will be named "M Billing Account" by default
+    gcloud beta billing projects link %PROJECT% --billing-account samkhalilian@hotmail.com 
 
     # create bucket
-    BUCKET=[Your domain]
-    gsutil mb gs://${BUCKET}
+    set BUCKET=[Your domain] # samkhalilian.dev
+    gsutil mb gs://%BUCKET% # BadRequestException: 400 Unknown project id: static-website
 
     # copy web files
     gsutil cp *.html gs://${BUCKET}

@@ -1,0 +1,4 @@
+File
+====
+
+.. literalinclude:: latex.rst

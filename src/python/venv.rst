@@ -1,8 +1,3 @@
-.. post:: Oct 14, 2022
-   :category: Programming
-   :tags: Python
-   :author: Sam Khalilian
-
 Virtual Environments
 ====================
 
@@ -19,6 +14,6 @@ To create the virutal environemnt where all project package dependencies will be
 
 .. code-block:: bash
 
-    >> cd C:\project\foo # select project directoy
-    >> %USERPROFILE%\AppData\Local\Programs\Python\Python310\python -m venv .venv_foo # create .venv_foo
-    >> C:\project\foo\.venv_foo\Scripts\activate # activate venv_foo
+    >> cd %DIR_PROJECT% # select project directoy
+    >> %USERPROFILE%\AppData\Local\Programs\Python\Python310\python -m venv .venv # create directory .venv
+    >> .venv\Scripts\activate # activate .venv
