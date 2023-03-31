@@ -39,6 +39,7 @@ extensions = [
     'notfound.extension',
     'sphinx_last_updated_by_git',
     # 'sphinxnotes.isso',
+    "sphinx_github_changelog",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -220,19 +221,36 @@ blog_authors = {
 # a link to a archive pages generated for each tag, category, and year.
 # In addition, there are authors.html, languages.html, and locations.html
 # sidebars that link to author and location archive pages.
+
+# html_theme = 'alabaster'
+# html_sidebars = {
+#     # "index": ["project.html", "localtoc.html", "searchbox.html", "ethicalads.html"],
+#     '**': [ 
+#         'about.html',
+#         # 'postcard.html', 
+#         'navigation.html',
+#         'recentposts.html', 
+#         # 'tagcloud.html',
+#         'categories.html',  
+#         'archives.html',
+#         'searchbox.html',
+#         ],
+#     }
+
+# html_theme = 'alabester'
 html_sidebars = {
-    # "index": ["project.html", "localtoc.html", "searchbox.html", "ethicalads.html"],
-    '**': [ 
-        'about.html',
-        # 'postcard.html', 
-        'navigation.html',
-        'recentposts.html', 
-        # 'tagcloud.html',
-        'categories.html',  
-        'archives.html',
-        'searchbox.html',
-        ],
-    }
+        '**': [
+            'about.html',
+            'navigation.html',
+            'recentposts.html', 
+            'relations.html',
+            'categories.html',  
+            'archives.html',
+            'searchbox.html',
+            'sourcelink.html', # this page
+            # 'donate.html', 
+        ]
+}
 
 # extlinks = {
 #     "wiki": ("https://en.wikipedia.org/wiki/%s", "%s"),
@@ -312,7 +330,8 @@ html_sidebars = {
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
+# html_theme = 'alabaster'
+html_theme = 'alabester'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

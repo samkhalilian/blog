@@ -6,14 +6,21 @@
 Contents
 ========
 
+| Author: |author|
+
+| Last Update: |today|
+
 .. toctree::
    :maxdepth: 2
 
    about
-   to_do
    release/release
+
+   posts
    infra/index
    python/index
+   to_do_list
+   
 
 .. .. toctree::
    :maxdepth: 2

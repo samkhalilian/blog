@@ -1,19 +1,18 @@
 Docs
 ====
 
+This blog is written using `ABlog <https://ablog.readthedocs.io>`_ an extension to `Sphinx <https://www.sphinx-doc.orgl>`_
+which uses Mark Up language `Restructured Text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`+.
+
 ======
 Sphinx
 ======
-
 Restructerd Text
 ----------------
 
 =====
 ABlog
 =====
-
-This blog is written using `ABlog <https://ablog.readthedocs.io>`_ an extension to `Sphinx <https://www.sphinx-doc.orgl>`_
-which uses Mark Up language `Restructured Text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`+.
 
 https://ablog.readthedocs.io/manual/ablog-commands/
 
@@ -31,19 +30,34 @@ https://ablog.readthedocs.io/manual/ablog-commands/
     >> ablog clean && ablog build && ablog serve  # CTRL + C so stop local host
     >> ablog serve -r # to watch yourself blog
 
+Theme
+-----
+
+https://github.com/introt/alabester
+
+Comments
+--------
+
+.. todo::
+
+    Add comments using Disque https://ablog.readthedocs.io/en/stable/manual/ablog-configuration-options.html#disqus-integration
+
 ============
 GitHub Pages
 ============
 
+1. On GitHub create a repo <username>.github.io
+2. Make the repo public
+3. Then in the command prompt:
+
 .. code-block:: bash
 
-    >> set GITHUB_PAGES=samkhalilian
-    >> set GITHUB_TOKEN=GITHUB_TOKEN_SAMKHALILIAN_SAMKHALILIAN_GITHUB_IO
-    >> set WEBSITE=Z:/blog/src/_website
-    >> set REPODIR=Z:/samkhalilian.github.io
+    >> cd Z:/
+    >> set GITHUB_USERNAME=samkhalilian
+    >> git clone https://github.com/%GITHUB_USERNAME%/%GITHUB_USERNAME%.github.io.git
+    >> set REPODIR=Z:/%GITHUB_USERNAME%.github.io
     >> set GITHUB_BRANCH=main
-    >> ablog deploy -p %REPODIR% -g %GITHUB_PAGES% --github-token %GITHUB_TOKEN%
-    >> ablog deploy -p %REPODIR% -g %GITHUB_PAGES% --github-branch %GITHUB_BRANCH% --github-ssh  # this works
+    >> ablog deploy -p %REPODIR% -g %GITHUB_USERNAME% --github-branch %GITHUB_BRANCH% --github-ssh
 
 Windows Bug fix
 ---------------
@@ -63,4 +77,6 @@ Google Domain
 =====================
 Google Cloud Platform
 =====================
+
+
 

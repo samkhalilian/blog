@@ -1,8 +1,6 @@
 Release Notes
 =============
 
-Last Update: |today|
-
 Versioning convention follows that described in `Python Dev Guide - Development Cycle <https://devguide.python.org/developer-workflow/development-cycle/>`_.
 
 A release version X.Y.ZTN is tagged with a release level T.  Where X, Y, Z are the major, minor, bug fix versions and T is a, b, rc 
@@ -13,6 +11,14 @@ or null for alpha, beta, release candidates or public releases.  N represents th
 * New minor versions are feature releases and will be released periodically.
 
 * New bugfixes are released as required.
+
+* Alpha releases cover White box testing internal behaviour i.e. unit Tests.
+
+* Beta releases cover Black box testing external behaviour i.e. regression or end user tests.
+
+* Release candidates are pre-releases which include fixes for issues raised in Beta testing.
+
+* Public releases are the final product relase to the public.
 
 ==============
 Active Release
@@ -48,7 +54,10 @@ Release History
     :format: {title} by {author} on {date}
     :excerpts:
 
-.. :expand: Read more ...
+=================
+GitHub Change Log
+=================
 
-.. .. isso::
+.. changelog::
+    :github: https://github.com/samkhalilian/blog/releases/
     
