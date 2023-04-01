@@ -7,7 +7,7 @@ Infra
     windows_terminal
     vs_code
     start_up
-    git
+    github
     test
     continuous_integration
     linux
