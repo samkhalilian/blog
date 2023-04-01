@@ -1,18 +1,16 @@
 GitHub
 ======
 
+pip install sphinx-github-changelog
+
 In GitHub when creating a new repo its good practice:
 
 * Make it private
-* Require a pull request to be created before code can be merged to main
+* Require a pull request to be created before code can be merged to main branch
 * Require approvals of pull requests
 
-The clone the repo:
-
-.. code-block:: bash
-
-    >> cd Z:/
-    >> git clone <https://github.com/<username>/<repo>.git
+.. warning::
+    Pull request authors cannot approve their own pull requests.
 
 To create a new repository in GitHub and then from the command line:
 
@@ -24,6 +22,13 @@ To create a new repository in GitHub and then from the command line:
     >> git branch -M main
     >> git remote add origin https://github.com/samkhalilian/blog.git
     >> git push -u origin main
+
+Once a repo has been created clone the repo:
+
+.. code-block:: bash
+
+    >> cd Z:/
+    >> git clone <https://github.com/<username>/<repo>.git
 
 To commit changes to this repo:
 
@@ -37,4 +42,3 @@ To commit changes to this repo:
 
 In GitHub approve and merge pull requests.
 
-https://docs.github.com/en/pages/quickstart

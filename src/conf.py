@@ -39,6 +39,8 @@ extensions = [
     'notfound.extension',
     'sphinx_last_updated_by_git',
     # 'sphinxnotes.isso',
+    "sphinx_github_changelog",
+    "sphinx.ext.graphviz",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -424,3 +426,7 @@ html_show_copyright = True
 htmlhelp_basename = "SamsBlogdoc"
 
 gitablhub_pages = "samkhalilian"
+
+graphviz_output_format = 'svg'
+
+sphinx_github_changelog_token = os.environ["SPHINX_GITHUB_CHANGELOG_TOKEN"]
