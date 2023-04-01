@@ -1,6 +1,8 @@
 GitHub Pages
 ============
 
+https://docs.github.com/en/pages/quickstart
+
 `GitHub Pages <https://pages.github.com/>`_ can be used host a static website for free.
 
 GitHub Pages uses `MarkDown <https://www.markdownguide.org/>`_ which is turned in to HTML by `Jekyll <https://jekyllrb.com/>`_.
