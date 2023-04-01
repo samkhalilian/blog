@@ -1,4 +1,6 @@
 .vnenv*/
+.vnenv/
+.vnenv_39/
 src/_static/
 src/__pycache__/
 src/_website/
