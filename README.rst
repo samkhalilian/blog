@@ -1,42 +1,38 @@
-Sam's Blog
-==========
+Learn to Code Documentation
+===========================
 
-============
-Introduction
-============
+=====
+About
+=====
 
-Welcome to my Math, Coding and Trading blog!
+Welcome to my quantitative development notes!
 
-This blog is written using `ABlog <https://ablog.readthedocs.io>`_ an extension to `Sphinx <https://www.sphinx-doc.orgl>`_.
+These pages provide learning resources on math, coding, and trading. They are based on the author's experience in academia and industry. 
 
-`Google Cloud Platform <https://cloud.google.com/storage/docs/hosting-static-website>`_ hosts the blog as a static website at `www.samkhalilian.dev <www.samkhalilian.dev>`_. 
+.. seealso::
+    
+    You can find more details about me at `LinkedIn <https://www.linkedin.com/in/sam-khalilian-453704146>`_.
 
 ===========
 Quick Start
 ===========
 
-To build the blogs HTML pages install `Python 3.6 <https://www.python.org/downloads/>`_ or higher, then from the command line:
+To build the HTML pages install `Python 3.6 <https://www.python.org/downloads/>`_ or higher, then from the command line:
 
 .. code-block:: bash
     
-    # optional environment variables
-    >> set PYTHON = %LOCALAPPDATA%\Programs\Python\Python310\python
-    >> set HOME = %HOMEDIR%%HOMEPATH%  # set home directoy
-    >> set PROJECT = %HOME%/project  # select project directoy
+    $ cd %PROJECT% # project directory
+    $ git clone https://github.com/samkhalilian/blog.git
     
-    >> cd %PROJECT%
-    >> git clone https://github.com/samkhalilian/blog.git
-
     # virtual environment
-    >> cd blog
-    >> %PYTHON% -m venv .venv 
-    >> .venv\Scripts\activate
-
-    # install packages
-    >> pip install -r requirements.txt
+    $ cd blog
+    $ %PYTHON% -m venv .venv # python.exe path
+    $ .venv\Scripts\activate
     
-    # build blog pages
-    >> cd ./blog/src
-    >> ablog clean
-    >> ablog build # build HTML pages
-    >> ablog serve # to launch HTML pages
+    # install packages
+    $ pip install -r requirements.txt
+    
+    # build pages
+    $ rmdir /s build
+    $ sphinx-build -M html source build
+    $ start "" build\html\index.html
