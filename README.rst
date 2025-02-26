@@ -8,10 +8,8 @@ About
 Welcome to my quantitative development notes!
 
 These pages provide learning resources on math, coding, and trading. They are based on the author's experience in academia and industry. 
-
-.. seealso::
     
-    You can find more details about me at `LinkedIn <https://www.linkedin.com/in/sam-khalilian-453704146>`_.
+You can find more details about me at `LinkedIn <https://www.linkedin.com/in/sam-khalilian-453704146>`_.
 
 ===========
 Quick Start
