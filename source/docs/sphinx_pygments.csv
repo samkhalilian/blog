@@ -1,0 +1,15 @@
+﻿Language,Pygments Lexer Name
+C,c
+C++,cpp
+CSS,css
+DockerFile,docker
+DOS Batch,bat
+HTML,html
+JSON,json
+Latex,latex
+Makefile,make
+Python,python
+ReStructuredText,rst
+Shell Script,sh or bash
+SQL,sql
+XML,xml

@@ -1,2 +1,0 @@
-Bisection Method
-================

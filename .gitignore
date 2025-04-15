@@ -1,6 +1,7 @@
+.*/
+.scratch/
 .vnenv/
-.vnenv_39/
-src/_static/
-src/__pycache__/
-src/_website/
-src/.doctrees/
+build/
+source/_drafts/
+source/__pycache__/
+to_do

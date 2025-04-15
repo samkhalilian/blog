@@ -1,42 +1,37 @@
-Sam's Blog
-==========
+Learn to Code Documentation
+===========================
 
-============
-Introduction
-============
-
-Welcome to my Math, Coding and Trading blog!
-
-This blog is written using `ABlog <https://ablog.readthedocs.io>`_ an extension to `Sphinx <https://www.sphinx-doc.orgl>`_.
-
-`Google Cloud Platform <https://cloud.google.com/storage/docs/hosting-static-website>`_ hosts the blog as a static website at `www.samkhalilian.dev <www.samkhalilian.dev>`_. 
-
-===========
-Quick Start
-===========
-
-To build the blogs HTML pages install `Python 3.6 <https://www.python.org/downloads/>`_ or higher, then from the command line:
+To build the HTML pages install `Python 3.6 <https://www.python.org/downloads/>`_ or higher, then from the command line:
 
 .. code-block:: bash
     
-    # optional environment variables
-    >> set PYTHON = %LOCALAPPDATA%\Programs\Python\Python310\python
-    >> set HOME = %HOMEDIR%%HOMEPATH%  # set home directoy
-    >> set PROJECT = %HOME%/project  # select project directoy
-    
-    >> cd %PROJECT%
-    >> git clone https://github.com/samkhalilian/blog.git
+    $ cd %PROJECT% # project directory
+    $ git clone https://github.com/samkhalilian/blog.git
 
     # virtual environment
-    >> cd blog
-    >> %PYTHON% -m venv .venv 
-    >> .venv\Scripts\activate
-
-    # install packages
-    >> pip install -r requirements.txt
+    $ cd blog
+    $ %PYTHON% -m venv .venv # python.exe path
+    $ .venv\Scripts\activate
     
-    # build blog pages
-    >> cd ./blog/src
-    >> ablog clean
-    >> ablog build # build HTML pages
-    >> ablog serve # to launch HTML pages
+    # install packages
+    $ pip install -r requirements.txt
+    
+    # build pages
+    $ rmdir /s build
+    $ sphinx-build -M html source build -v -E --force # create HTML pages in build\html
+    
+    $ start "" build\html\index.html # open in browser
+    
+    $ python -m http.server -d build/html # serve on localhost:8000
+    $ start http://localhost:8000/index.html # open in browser
+
+
+    TODO:
+
+    https://jupyterbook.org/en/stable/intro.html
+    Contact Us
+    Ask and Answer Questions
+    Vote for new feagtures ?????  -- use sphinxcontrib.datatemplates to save github repo issues into a datatable
+    Multi version feature
+
+    https://github.com/settings/tokens
