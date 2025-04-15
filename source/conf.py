@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath("_ext"))
 project = "Learn to Code"
 copyright = '2024, Sam Khalilian'
 author = 'Sam Khalilian'
-version = '1.0'
+version = '2.0'
 release = '1.0.0'
 
 # source_encoding = 'utf-8'
