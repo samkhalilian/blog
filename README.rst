@@ -26,12 +26,26 @@ To build the HTML pages install `Python 3.6 <https://www.python.org/downloads/>`
     $ start http://localhost:8000/index.html # open in browser
 
 
-    TODO:
+===================
+Sphinx Multiversion
+=================== 
 
-    https://jupyterbook.org/en/stable/intro.html
-    Contact Us
-    Ask and Answer Questions
-    Vote for new feagtures ?????  -- use sphinxcontrib.datatemplates to save github repo issues into a datatable
-    Multi version feature
+Builds are versioned by branch/tag, and each version is built in its own directory. This allows you to host multiple versions of 
+your documentation on the same server.
 
-    https://github.com/settings/tokens
+.. code-block:: bash
+
+    $ pip install sphinx sphinx-multiversion
+    $ sphinx-multiversion source build/html # build directory per branch in build/html where branch = directory name
+
+====
+TODO
+====
+
+https://jupyterbook.org/en/stable/intro.html
+Contact Us
+Ask and Answer Questions
+Vote for new feagtures ?????  -- use sphinxcontrib.datatemplates to save github repo issues into a datatable
+Multi version feature
+
+https://github.com/settings/tokens

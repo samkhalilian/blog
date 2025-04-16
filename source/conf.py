@@ -40,13 +40,14 @@ extensions = [
     "sphinx_design",
     # "sphinx_comments",
     "sphinxemoji.sphinxemoji",
+    "sphinx_multiversion",    
     # "sphinxcontrib.disqus",
-    "sphinx_comments",
-    "sphinxcontrib.datatemplates",
-    # "my_extension",
+    # "sphinx_comments",
     # "github_issues", # turn as requires internet connection to build and csv already saved
     # "github_discussions", # turn as requires internet connection to build and csv already saved
-]
+    # "sphinxcontrib.datatemplates", # this dont work created own extension instead to create csv table
+    # "my_extension",
+]    
 # extensions = [
 #     'sphinx.ext.extlinks',
 #     'sphinx.ext.intersphinx',
@@ -279,3 +280,10 @@ comments_config = {
         "theme": "light",
     }
 }
+
+##################################################################
+# sphinx_multiversion
+# Optional: control which branches/tags are included
+smv_tag_whitelist = r"^v\d+\.\d+$"  # Tags like v1.0, v2.0
+smv_branch_whitelist = r"^(main|master|v\d+\.\d+)$"
+smv_remote_whitelist = r"^origin$"
