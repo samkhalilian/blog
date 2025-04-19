@@ -3,19 +3,19 @@
 [
     {
         "name": "stable",
-        "version": "v1.0",
+        "version": "v3.0",
         "url": "https://mysite.org/en/v1.0/",
         "preferred": true
     },
     {
         "name": "latest",
-        "version": "v2.0",
+        "version": "v4.0",
         "url": "https://mysite.org/en/v2.0/"
     },
-    {
-        "name": "dev",
-        "version": "main",
-        "url": "https://mysite.org/en/main/",
-        "preferred": true
-    },
+    // {
+    //     "name": "dev",
+    //     "version": "main",
+    //     "url": "https://mysite.org/en/main/",
+    //     "preferred": true
+    // },
 ]

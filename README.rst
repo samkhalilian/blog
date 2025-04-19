@@ -25,6 +25,8 @@ To build the HTML pages install `Python 3.6 <https://www.python.org/downloads/>`
     $ python -m http.server -d build/html # serve on localhost:8000
     $ start http://localhost:8000/index.html # open in browser
 
+    $ sphinx-build . build/html
+    $ start "" .build\html\index.html
 
 ===================
 Sphinx Multiversion
@@ -37,6 +39,7 @@ your documentation on the same server.
 
     $ pip install sphinx sphinx-multiversion
     $ sphinx-multiversion source build/html # build directory per branch in build/html where branch = directory name
+    $ sphinx-build . build/html -c source -D master_doc=source/index
 
 ====
 TODO

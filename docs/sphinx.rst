@@ -144,10 +144,22 @@ E.g.
 Multi-Version
 =============
 
-.. code-block:: bash
+https://sphinx-contrib.github.io/multiversion/main/index.html#
+
+Multi-versioning allows you to build documentation for multiple versions of your project. This is useful if you have a project 
+that has multiple branches or tags, and you want to host documentation for each version.
+
+Multi-versioning is done by creating a separate directory for each version of your documentation. Each version is built in its own  
+Multi-version directory requires
+
+.. code-block:: bash 
 
    $ pip install sphinx-multiversion
 
+
+.. code-block:: bash
+
+   $ sphinx-build . .build/html
 
 
 ========
