@@ -128,10 +128,10 @@ html_theme_options = {
     # "announcement": "If you would like to contribute to these docs check out <a href='https://github.com/samkhalilian/blog'>GitHub repository!</a>",
 
     
-    # "switcher": {
-    #     "json_url": "https://mysite.org/en/latest/_static/switcher.json",
-    #     "version_match": "v1.0",
-    # },
+    "switcher": {
+        "json_url": "https://mysite.org/en/latest/_static/switcher.json",
+        "version_match": "v1.0",
+    },
 
     # "navbar_start": ["navbar-logo", "version-switcher"], 
     "navbar_end": [
@@ -284,7 +284,8 @@ comments_config = {
 ##################################################################
 # sphinx_multiversion
 # Optional: control which branches/tags are included
-smv_tag_whitelist = r"^v\d+\.\d+$"  # Tags like v1.0, v2.0
-# smv_branch_whitelist = r"^(main|master|v\d+\.\d+)$"
-smv_branch_whitelist = r"^(v\d+\.\d+)$"
-smv_remote_whitelist = r"^origin$"
+# smv_tag_whitelist = r"^v\d+\.\d+$"  # Tags like v1.0, v2.0
+# # smv_branch_whitelist = r"^(main|master|v\d+\.\d+)$"
+# smv_branch_whitelist = r"^(v\d+\.\d+)$"
+# smv_remote_whitelist = r"^origin$"
+smv_branch_whitelist = r"^(v3.0|v4.0)$"

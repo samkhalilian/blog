@@ -3,7 +3,7 @@
 [
     {
         "name": "stable",
-        "version": "v3.0",
+        "version": "v3.0 (stable)",
         "url": "https://mysite.org/en/v1.0/",
         "preferred": true
     },
