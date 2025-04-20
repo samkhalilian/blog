@@ -1,3 +1,4 @@
+import json
 import os
 import sys
 
@@ -17,8 +18,10 @@ sys.path.insert(0, os.path.abspath("_ext"))
 project = "Learn to Code"
 copyright = '2024, Sam Khalilian'
 author = 'Sam Khalilian'
-version = '2.0'
-release = '1.0.0'
+# version = 'v4.0'
+# release = '1.0.0'
+version = os.environ.get("SPHINX_MULTIVERSION_NAME", "local")
+release = version
 
 # source_encoding = 'utf-8'
 
@@ -73,7 +76,11 @@ extensions = [
 
 templates_path = ['_templates']
 exclude_patterns = [
-    "_drafts" # exclude all directories starting with __ as these are in draft status
+    ".*",
+    "requirements.txt",
+    "README.rst",
+    "TODO.rst",
+     "_drafts",
 ]
 
 # -- Options for HTML output -------------------------------------------------
@@ -127,12 +134,8 @@ html_theme_options = {
     # "show_version_warning_banner": True,
     # "announcement": "If you would like to contribute to these docs check out <a href='https://github.com/samkhalilian/blog'>GitHub repository!</a>",
 
+    "show_version_dropdown": True,
     
-    "switcher": {
-        "json_url": "https://mysite.org/en/latest/_static/switcher.json",
-        "version_match": "v3.0",
-    },
-
     # "navbar_start": ["navbar-logo", "version-switcher"], 
     "navbar_end": [
         # "search-field.html",
@@ -140,6 +143,11 @@ html_theme_options = {
         "theme-switcher",
         "navbar-icon-links.html", 
         ],
+
+    "switcher": {
+        "json_url": "_static/versions.json",
+        "version_match": version,    
+    },
 
     "icon_links": [
         {
@@ -288,4 +296,21 @@ comments_config = {
 # # smv_branch_whitelist = r"^(main|master|v\d+\.\d+)$"
 # smv_branch_whitelist = r"^(v\d+\.\d+)$"
 # smv_remote_whitelist = r"^origin$"
-smv_branch_whitelist = r"^(v3.0|v4.0)$"
+smv_branch_whitelist = r"^(v4.0)$"
+
+# Dynamically generate versions.json if multiversion is running
+if "SPHINX_MULTIVERSION_NAME" in os.environ and "SPHINX_MULTIVERSION_LIST" in os.environ:
+    try:
+        versions = []
+        for item in json.loads(os.environ["SPHINX_MULTIVERSION_LIST"]):
+            versions.append({
+                "version": item["name"],
+                "url": f"/{item['name']}/",
+            })
+
+        os.makedirs("_static", exist_ok=True)
+        with open("_static/versions.json", "w") as f:
+            json.dump({"versions": versions}, f, indent=2)
+
+    except Exception as e:
+        print(f"⚠️ Failed to generate versions.json: {e}")

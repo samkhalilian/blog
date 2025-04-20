@@ -8,7 +8,7 @@ maintenance.
 .. toctree::
     :maxdepth: 1
 
-    sdlc
+    dir
     unit_tests
     git
     github

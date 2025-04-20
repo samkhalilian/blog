@@ -1,7 +1,6 @@
 .*/
 .scratch/
 .vnenv/
-build/
-source/_drafts/
-source/__pycache__/
-to_do
+_build/
+_drafts/
+__pycache__/
