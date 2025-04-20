@@ -130,7 +130,7 @@ html_theme_options = {
     
     "switcher": {
         "json_url": "https://mysite.org/en/latest/_static/switcher.json",
-        "version_match": "v1.0",
+        "version_match": "v3.0",
     },
 
     # "navbar_start": ["navbar-logo", "version-switcher"], 
