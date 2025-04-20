@@ -49,17 +49,17 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = '_static/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v4.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'local';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
         </script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Git" href="git.html" />
-    <link rel="prev" title="SDLC" href="index.html" />
+    <link rel="prev" title="Directory Structure" href="dir.html" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="20 Apr 2025 09:48"/>
+    <meta name="docbuild:last-update" content="20 Apr 2025 12:56"/>
 
 
 
@@ -717,6 +717,19 @@ software work as expected. In this section, we will discuss how to write and run
 </div>
 <p>Python has a built-in module called <cite>unittest</cite> that provides a framework for writing and running unit tests.
 It is a powerful tool that allows you to create test cases, group them into test suites, and run them with a test runner.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="k">class</span> <span class="nc">TestMathOperations</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_addition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_subtraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
 </section>
 <section id="pytest">
 <h3>pytest<a class="headerlink" href="#pytest" title="Permalink to this heading">#</a></h3>
@@ -726,6 +739,18 @@ It is a powerful tool that allows you to create test cases, group them into test
 </div>
 <p>Alternatively, you can use <cite>pytest</cite>, a third-party testing framework that is more flexible and easier to use than <cite>unittest</cite>.
 It allows you to write simple test functions and provides powerful features like fixtures, parameterized tests, and plugins.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="k">def</span> <span class="nf">test_addition</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">test_subtraction</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">pytest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
 </section>
 <section id="unittest-vs-pytest">
 <h3>unittest vs pytest<a class="headerlink" href="#unittest-vs-pytest" title="Permalink to this heading">#</a></h3>
@@ -791,12 +816,12 @@ user-friendly and has a rich ecosystem of plugins, but it requires an additional
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="index.html"
+       href="dir.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">SDLC</p>
+        <p class="prev-next-title">Directory Structure</p>
       </div>
     </a>
     <a class="right-next"

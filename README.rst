@@ -38,8 +38,10 @@ your documentation on the same server.
 .. code-block:: bash
 
     $ pip install sphinx sphinx-multiversion
-    $ sphinx-multiversion source build/html # build directory per branch in build/html where branch = directory name
-    $ sphinx-build . build/html -c source -D master_doc=source/index
+    
+    $ rmdir /s /q _build
+    $ sphinx-multiversion . _build/html # build directory per branch in build/html where branch = directory name
+    $ sphinx-build . _build/html -c . -D master_doc=source/index
 
 ====
 TODO

@@ -1,4 +1,4 @@
-rmdir -r _build
+rmdir /s /q _build
 sphinx-multiversion . _build/html
 sphinx-build . _build/html -c . -D master_doc=index
 echo "Done! Open build/html/index.html"

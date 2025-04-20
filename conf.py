@@ -18,9 +18,9 @@ sys.path.insert(0, os.path.abspath("_ext"))
 project = "Learn to Code"
 copyright = '2024, Sam Khalilian'
 author = 'Sam Khalilian'
-# version = 'v4.0'
+version = 'v6.0'
 # release = '1.0.0'
-version = os.environ.get("SPHINX_MULTIVERSION_NAME", "local")
+# version = os.environ.get("SPHINX_MULTIVERSION_NAME", "local")
 release = version
 
 # source_encoding = 'utf-8'
@@ -134,7 +134,7 @@ html_theme_options = {
     # "show_version_warning_banner": True,
     # "announcement": "If you would like to contribute to these docs check out <a href='https://github.com/samkhalilian/blog'>GitHub repository!</a>",
 
-    "show_version_dropdown": True,
+    # "show_version_dropdown": True,
     
     # "navbar_start": ["navbar-logo", "version-switcher"], 
     "navbar_end": [
@@ -298,14 +298,21 @@ comments_config = {
 # smv_remote_whitelist = r"^origin$"
 smv_branch_whitelist = r"^(v4.0)$"
 
-# Dynamically generate versions.json if multiversion is running
+# import os
+# import json
+
+# html_static_path = ["_static"]
+
+print(">>> SPHINX_MULTIVERSION_NAME =", os.environ.get("SPHINX_MULTIVERSION_NAME"))
+print(">>> Generating versions.json:", os.environ.get("SPHINX_MULTIVERSION_LIST"))
+
 if "SPHINX_MULTIVERSION_NAME" in os.environ and "SPHINX_MULTIVERSION_LIST" in os.environ:
     try:
         versions = []
         for item in json.loads(os.environ["SPHINX_MULTIVERSION_LIST"]):
             versions.append({
                 "version": item["name"],
-                "url": f"/{item['name']}/",
+                "url": f"/{item['name']}/",  # or "" if building for root
             })
 
         os.makedirs("_static", exist_ok=True)
