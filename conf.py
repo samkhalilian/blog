@@ -2,6 +2,26 @@ import json
 import os
 import sys
 
+
+##########################################
+# diagnostics
+print(">>> [conf.py top] __file__ =", __file__)
+print(">>> [conf.py top] SPHINX_MULTIVERSION_NAME =", os.environ.get("SPHINX_MULTIVERSION_NAME"))
+print(">>> [conf.py top] GIT HEAD =", os.popen('git rev-parse --abbrev-ref HEAD').read().strip())
+print(">>> [conf.py top] Is .git here? =", os.path.isdir(".git"))
+##########################################
+
+
+# print(__file__)
+# print(">>> DEBUG: SPHINX_MULTIVERSION_NAME =", os.environ.get("SPHINX_MULTIVERSION_NAME"))
+# print(">>> DEBUG: SPHINX_MULTIVERSION_LIST =", os.environ.get("SPHINX_MULTIVERSION_LIST"))
+
+# print(">>> ENV DEBUG")
+# for key, value in os.environ.items():
+#     if key.startswith("SPHINX_"):
+#         print(f"{key} = {value}")
+# print(">>> END DEBUG")
+
 # Add the `_ext` directory to the Python path
 sys.path.insert(0, os.path.abspath("_ext"))
 
@@ -18,7 +38,8 @@ sys.path.insert(0, os.path.abspath("_ext"))
 project = "Learn to Code"
 copyright = '2024, Sam Khalilian'
 author = 'Sam Khalilian'
-version = 'v6.0'
+# version = 'v6.0'
+version = os.environ.get("SPHINX_MULTIVERSION_NAME")#, "local")
 # release = '1.0.0'
 # version = os.environ.get("SPHINX_MULTIVERSION_NAME", "local")
 release = version
@@ -296,28 +317,58 @@ comments_config = {
 # # smv_branch_whitelist = r"^(main|master|v\d+\.\d+)$"
 # smv_branch_whitelist = r"^(v\d+\.\d+)$"
 # smv_remote_whitelist = r"^origin$"
-smv_branch_whitelist = r"^(v4.0)$"
+smv_tag_whitelist = r'^(v4\.0|v5\.0)$'
+smv_remote_whitelist = r'^origin$'
+smv_branch_whitelist = r"^(v4\.0|v5\.0)$"
 
 # import os
 # import json
 
 # html_static_path = ["_static"]
 
-print(">>> SPHINX_MULTIVERSION_NAME =", os.environ.get("SPHINX_MULTIVERSION_NAME"))
-print(">>> Generating versions.json:", os.environ.get("SPHINX_MULTIVERSION_LIST"))
+# print(">>> SPHINX_MULTIVERSION_NAME =", os.environ.get("SPHINX_MULTIVERSION_NAME"))
+# print(">>> Generating versions.json:", os.environ.get("SPHINX_MULTIVERSION_LIST"))
 
-if "SPHINX_MULTIVERSION_NAME" in os.environ and "SPHINX_MULTIVERSION_LIST" in os.environ:
-    try:
-        versions = []
-        for item in json.loads(os.environ["SPHINX_MULTIVERSION_LIST"]):
-            versions.append({
-                "version": item["name"],
-                "url": f"/{item['name']}/",  # or "" if building for root
-            })
+# if "SPHINX_MULTIVERSION_NAME" in os.environ and "SPHINX_MULTIVERSION_LIST" in os.environ:
+#     try:
+#         versions = []
+#         for item in json.loads(os.environ["SPHINX_MULTIVERSION_LIST"]):
+#             versions.append({
+#                 "version": item["name"],
+#                 "url": f"/{item['name']}/",  # or "" if building for root
+#             })
 
-        os.makedirs("_static", exist_ok=True)
-        with open("_static/versions.json", "w") as f:
-            json.dump({"versions": versions}, f, indent=2)
+#         os.makedirs("_static", exist_ok=True)
+#         with open("_static/versions.json", "w") as f:
+#             json.dump({"versions": versions}, f, indent=2)
 
-    except Exception as e:
-        print(f"⚠️ Failed to generate versions.json: {e}")
+#     except Exception as e:
+#         print(f"⚠️ Failed to generate versions.json: {e}")
+
+
+# def setup(app):
+#     import os
+#     print(">>> LATE LOAD: SPHINX_MULTIVERSION_NAME =", os.environ.get("SPHINX_MULTIVERSION_NAME"))
+def setup(app):
+    print(f">>> [setup()] {__file__}")
+    print(">>> [setup()] SPHINX_MULTIVERSION_NAME =", os.environ.get("SPHINX_MULTIVERSION_NAME"))
+    print(">>> [setup()] SPHINX_MULTIVERSION_LIST =", os.environ.get("SPHINX_MULTIVERSION_LIST"))
+
+    if "SPHINX_MULTIVERSION_LIST" in os.environ:
+        try:
+            versions = []
+            refs = json.loads(os.environ["SPHINX_MULTIVERSION_LIST"])
+            for ref in refs:
+                versions.append({
+                    "version": ref["name"],
+                    "url": f"/{ref['name']}/"
+                })
+
+            os.makedirs("_static", exist_ok=True)
+            with open("_static/versions.json", "w") as f:
+                json.dump({"versions": versions}, f, indent=2)
+
+            print(">>> ✅ versions.json generated!")
+
+        except Exception as e:
+            print(">>> ❌ Error generating versions.json:", e)
